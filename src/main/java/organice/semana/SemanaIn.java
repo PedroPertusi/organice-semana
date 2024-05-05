@@ -1,6 +1,5 @@
-package organice.dia;
+package organice.semana;
 
-import java.util.Date;
 
 import lombok.Builder;
 import lombok.experimental.Accessors;
@@ -8,7 +7,10 @@ import lombok.experimental.Accessors;
 @Builder
 @Accessors(fluent = true, chain = true)
 public record SemanaIn (
-    Date data_inicio
+    String diaInicio,
+    String diaFim, 
+    String descricao
+
 ) {
-    
+
 }

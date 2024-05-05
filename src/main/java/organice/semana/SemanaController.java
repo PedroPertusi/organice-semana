@@ -12,6 +12,7 @@ import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestHeader;
 
+import organice.lembrete.LembreteDateIn;
 import organice.lembrete.LembreteOut;
 
 
@@ -23,20 +24,21 @@ public interface SemanaController {
     ResponseEntity<SemanaOut> read(@PathVariable("id_semana") String id_semana);
 
     // Rota de leitura de lembretes
-    // @PostMapping("/dia/lembretes")
-    // ResponseEntity<List<LembreteOut>> read_lembretes(
-    //     @RequestHeader(required = true, name = "id-user") String UserId,    
-    //     @RequestBody DiaData data);
+    @PostMapping("/semana/lembretes")
+    ResponseEntity<List<LembreteOut>> read_lembretes_semana(
+        @RequestHeader(required = true, name = "id-user") String UserId,    
+        @RequestBody LembreteDateIn data);
 
     // Rota de criação
     @PostMapping("/semana")
-    ResponseEntity<SemanOut> create(
+    ResponseEntity<SemanaOut> create(
         @RequestHeader(required = true, name = "id-user") String idUser,      
         @RequestBody SemanaIn semanaIn);
 
-    // Rota de atualização
-    // @PutMapping("/dia/{id_dia}")
-    // ResponseEntity<SemanOut> update(@PathVariable("id_dia") String id_dia, @RequestBody SemanaIn diaIn);
+
+    @PutMapping("/semana/{id_semana}")
+    ResponseEntity<SemanaOut> update(@PathVariable("id_semana") String id_semana, 
+    @RequestBody SemanaIn semanaIn);
 
     // Rota de exclusão
     @DeleteMapping("/semana/{id_semana}")
