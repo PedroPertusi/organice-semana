@@ -19,15 +19,15 @@ import organice.lembrete.LembreteOut;
 @FeignClient(name = "organice-semana")
 public interface SemanaController {
 
-    // Rota de leitura 
-    @GetMapping("/semana/{id_semana}")
-    ResponseEntity<SemanaOut> read(@PathVariable("id_semana") String id_semana);
+    // // Rota de leitura 
+    // @GetMapping("/semana/{id_semana}")
+    // ResponseEntity<SemanaOut> read(@PathVariable("id_semana") String id_semana);
 
-    // Rota de leitura de lembretes
-    @PostMapping("/semana/lembretes")
-    ResponseEntity<List<LembreteOut>> read_lembretes_semana(
-        @RequestHeader(required = true, name = "id-user") String UserId,    
-        @RequestBody LembreteDateIn data);
+    // // Rota de leitura de lembretes
+    // @PostMapping("/semana/lembretes")
+    // ResponseEntity<List<LembreteOut>> read_lembretes_semana(
+    //     @RequestHeader(required = true, name = "id-user") String UserId,    
+    //     @RequestBody LembreteDateIn data);
 
     // Rota de criação
     @PostMapping("/semana")
@@ -36,13 +36,13 @@ public interface SemanaController {
         @RequestBody SemanaIn semanaIn);
 
 
-    @PutMapping("/semana/{id_semana}")
-    ResponseEntity<SemanaOut> update(@PathVariable("id_semana") String id_semana, 
-    @RequestBody SemanaIn semanaIn);
+    // @PutMapping("/semana/{id_semana}")
+    // ResponseEntity<SemanaOut> update(@PathVariable("id_semana") String id_semana, 
+    // @RequestBody SemanaIn semanaIn);
 
-    // Rota de exclusão
-    @DeleteMapping("/semana/{id_semana}")
-    ResponseEntity<Void> delete(@PathVariable("id_semana") String id_semana);
+    // // Rota de exclusão
+    // @DeleteMapping("/semana/{id_semana}")
+    // ResponseEntity<Void> delete(@PathVariable("id_semana") String id_semana);
 
 
 } 
