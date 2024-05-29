@@ -9,7 +9,8 @@ import lombok.experimental.Accessors;
 public record SemanaOut (
     String data_inicio, 
     String data_fim,
-    String descricao
+    String descricao,
+    String id_semana
 ) {
     
 }
