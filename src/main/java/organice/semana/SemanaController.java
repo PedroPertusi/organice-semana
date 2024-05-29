@@ -24,10 +24,10 @@ public interface SemanaController {
     // ResponseEntity<SemanaOut> read(@PathVariable("id_semana") String id_semana);
 
     // Rota de leitura de lembretes
-    @PostMapping("/semana/{id_semana}/lembretes")
-    ResponseEntity<List<LembreteOut>> read_lembretes_semana(
-        @RequestHeader(required = true, name = "id-user") String UserId,    
-        @PathVariable("id_semana") String id_semana);
+    // @PostMapping("/semana/{id_semana}/lembretes")
+    // ResponseEntity<List<LembreteOut>> read_lembretes_semana(
+    //     @RequestHeader(required = true, name = "id-user") String UserId,    
+    //     @PathVariable("id_semana") String id_semana);
 
     // Rota de criação
     @PostMapping("/semana")
