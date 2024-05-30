@@ -19,9 +19,9 @@ import organice.lembrete.LembreteOut;
 @FeignClient(name = "organice-semana")
 public interface SemanaController {
 
-    // // Rota de leitura 
-    // @GetMapping("/semana/{id_semana}")
-    // ResponseEntity<SemanaOut> read(@PathVariable("id_semana") String id_semana);
+    // Rota de leitura 
+    @GetMapping("/semana/{id_semana}")
+    ResponseEntity<SemanaOut> read(@PathVariable("id_semana") String id_semana);
 
     // Rota de leitura de lembretes
     // @PostMapping("/semana/{id_semana}/lembretes")
@@ -40,9 +40,9 @@ public interface SemanaController {
     // ResponseEntity<SemanaOut> update(@PathVariable("id_semana") String id_semana, 
     // @RequestBody SemanaIn semanaIn);
 
-    // // Rota de exclusão
-    // @DeleteMapping("/semana/{id_semana}")
-    // ResponseEntity<Void> delete(@PathVariable("id_semana") String id_semana);
+    // Rota de exclusão
+    @DeleteMapping("/semana/{id_semana}")
+    ResponseEntity<Void> delete(@PathVariable("id_semana") String id_semana);
 
 
 } 
